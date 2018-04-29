@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity ^0.4.13;
+pragma solidity ^0.4.23;
 
 import "ds-test/test.sol";
 
@@ -25,7 +25,7 @@ contract User {
 
     TestThing thing;
 
-    function User(TestThing thing_) public {
+    constructor(TestThing thing_) public {
         thing = thing_;
     }
 
