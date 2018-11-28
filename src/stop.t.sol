@@ -15,14 +15,13 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity ^0.4.23;
+pragma solidity >0.4.23;
 
 import "ds-test/test.sol";
 
 import "./stop.sol";
 
 contract User {
-
     TestThing thing;
 
     constructor(TestThing thing_) public {
@@ -43,7 +42,6 @@ contract User {
 }
 
 contract TestThing is DSStop {
-
     bool public x;
 
     function toggle() public stoppable {
@@ -52,7 +50,6 @@ contract TestThing is DSStop {
 }
 
 contract DSStopTest is DSTest {
-
     TestThing thing;
     User user;
 
